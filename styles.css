@@ -1,0 +1,142 @@
+.bars {
+    margin: auto;
+    width: 1000px;
+    height: 510px;
+    flex-wrap: wrap;
+    display: flex;
+    border-radius: 7px;
+    border: solid black 5px;
+    background-color: lightgrey;
+}
+
+.bars div {
+    border-left: solid white 1px;
+    width: 12px;
+    height: 500px;
+    border-radius: 3px;
+}
+
+.singleBar {
+    background-color: dark;
+    margin-top: auto;
+}
+
+
+
+
+.btnStart {
+    float: left;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: lightgreen;
+    border-radius: 7px;
+    border-width: 2px;
+    height: 50px;
+    width: 80px;
+    box-shadow: inset 0 -0.6em 1em -0.35em rgba(0,0,0,0.17),inset 0 0.6em 2em -0.3em rgba(255,255,255,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+}
+.btnStart:hover {
+    border-color: white;
+    background-color: rgb(6, 199, 6);
+}
+.btnStart:active {
+    background-color: rgb(6, 199, 6);
+    transform: translateY(2px);
+}
+
+
+.btnReset {
+    float: left;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: lightsalmon;
+    border-radius: 7px;
+    border-width: 2px;
+    height: 50px;
+    width: 80px;
+    box-shadow: inset 0 -0.6em 1em -0.35em rgba(0,0,0,0.17),inset 0 0.6em 2em -0.3em rgba(255,255,255,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+}
+.btnReset:hover {
+    background-color: rgb(254, 108, 50);
+    border-color: white;
+}
+.btnReset:active {
+    background-color: rgb(254, 108, 50);
+    transform: translateY(2px);
+}
+
+
+.mute {
+    float: left;
+    border-radius: 5px;
+    border-width: 0px;
+    height: 35px;
+    width: 35px;
+    background-image: url(./src/pictures/volume-mute.png);
+    background-size:cover;
+}
+.mute:hover {
+    border-width: 1px;
+}
+.mute:active {
+    transform: translateY(1px);
+}
+
+
+
+
+.done {
+    position: absolute;
+    top: 35%;
+    right: 50%;
+    font-size: 0px;
+    font-weight: bold !important;
+    color:rgb(13, 233, 13);
+    opacity: 0.9;
+    border-radius: 5px;
+}
+
+
+.algorithemError {
+    position: absolute;
+    right: 10px;
+    top: -10px;
+    color: rgb(211, 0, 0);
+    border: solid black 2px;
+    font-weight: 900;
+    background-color: rgb(255, 255, 128);
+}
+
+
+.algorithemSelect {
+    border: solid black;
+    background-color: rgba(30, 167, 252, 0.534);
+    border-radius: 7px;
+}
+.algorithemSelect:hover {
+    border: solid white;
+    background-color:  rgba(0, 102, 255, 0.501);
+}
+
+
+.codeDiv {
+    position: relative;
+    float: left;
+    white-space: pre-wrap;
+}
+
+
+.descDiv {
+    position:static;
+    float: right;
+    padding-right: 10%;
+    white-space: pre-wrap;
+}
+
+.sortName {
+    text-align: center;
+}
+
+.description {
+    border-width: 30%;
+}

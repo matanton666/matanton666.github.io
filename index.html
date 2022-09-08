@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sorting algorithem viewer</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        body {
+            background-image: url(./src/pictures/abstract-gray-wave.jpg);
+            background-size: 100%;
+        }
+
+        table {
+            position: relative;
+            top: 0px;
+            width: auto;
+            line-height: 0px;
+            border-collapse: separate;
+            border-spacing: 35px 0px;
+            margin-top: 20px;
+        }
+        th {
+            font-size: 20px;
+            border: 10px;
+        }
+        td {
+            padding-top: 15px;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- buttons (start and reset) -->
+    <button id="startBtn" class="btnStart" onclick="startBtn();">Start</button>
+    <button id="resetBtn" class="btnReset" onclick="reset();">reset</button>
+
+
+    <table align="center">
+        <tr>
+            <th>time:</th>
+            <th>algorithem:</th>
+            <th>dencity:</th>
+            <th>scramble type:</th>
+            <th id="speedTxt">sorting speed: 90</th>
+        </tr>
+        <tr >
+        <td id = "timer">0</td>
+
+        <td>
+            <!-- dropdown menus -->
+            <select onchange="getAlgorithm();" class="algorithemSelect" name="algorithems" id="algorithems" size="1" >
+                <option value="none" style="color:white">select an algorithem</option>
+                <option value="n/a" disabled style="color:white">slow</option>
+                <option value="bubble">Bubble sort</option>
+                <option value="selection">selection sort</option>
+                <option value="cocktail">cocktail sort</option>
+                <option value="insertion">insertion sort</option>
+                <option value="comb">comb sort</option>
+                <option value="n/a" disabled style="color:white">fast</option>
+                <option value="quick">quick sort</option>
+                <option value="heap">heap sort</option>
+                <option value="shell">shell sort</option>
+                <option value="merge">merge sort</option>
+                <option value="n/a" disabled style="color:white">special(space complex)</option>
+                <option value="count">counting sort</option>
+                <option value="flash">flash sort</option>
+                <option value="radix">radix sort</option>
+            </select>
+        </td>
+            <h3 id = "algorithemError" class="algorithemError">
+                PLEASE SELECT<br>ALGORITHEM
+            </h3>
+
+        <td>
+            <select onchange="changeDencity();" class="algorithemSelect" name="dencitySelect" id="dencitySelect" size="1" >
+                <option value="100">dencity: 100</option>
+                <option value="50">dencity: 50</option>
+                <option value="250">dencity: 250</option>
+                <option value="500">dencity: 500</option>
+            </select>
+        </td>
+
+        <td>
+            <select onchange="selectScrambleType();" class="algorithemSelect" name="scrambleType" id="scrambleType" size="1" >
+                <option value="random">random positons</option>
+                <option value="half">half sorted</option>
+                <option value="reverse">reverse</option>
+                <option value="unique">unique</option>
+            </select>
+        </td>
+
+        <!-- speed selector and txt -->
+        <td>
+        <div class="sliderContainer">
+            <input oninput="getBarNum();" type="range" min="1" max="100" value="90" class="slider" id="slider">
+        </div>
+        </td>
+        </tr>
+    </table>
+<br>
+    <button id="mute" class="mute" onclick="toggleMute();"></button>
+
+    <div class="bars"></div>
+    <div class="done" id="done">DONE!</div>
+
+
+    <h1 id="sortName" class="sortName">name</h2>
+    <div id="codeDiv" class="codeDiv">
+        <h3>JavaScript Code</h3>
+        <p id="code" class="code">
+            this is the code test<br>
+            new line test
+        </p>
+    </div>
+    <div id="descDiv" class="descDiv">
+        <h3>Description</h3>
+        <p id="description" class="description">
+            description
+        </p> 
+    </div>
+
+
+    <script src="src/js/algorithemCodes.js"></script>
+    <script src="src/js/uiFunctions.js"></script>
+    <script src="src/js/barFunctions.js"></script>
+    <script src="src/js/sortingFuncs.js"></script>
+    <script src="src/js/app.js"></script>
+</body>
+</html>
