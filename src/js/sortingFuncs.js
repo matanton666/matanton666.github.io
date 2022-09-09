@@ -134,7 +134,8 @@ async function quickSort(arr) {
             stack.push(pivotIndex + 1);
             stack.push(end);
         }
-        if (aboart){return arr;}
+        
+        if (aboart || checkArraySorted(arr)){return arr;}
     }
 }
 

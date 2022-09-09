@@ -43,16 +43,25 @@ function shuffle(Arr){
 // colors all bars in purple and then in green
 async function afterSort(arr){
     if (!aboart){
-        for(let i = 0; i < arr.length; i++) {
+        let i, j;
+        let time = 20  - barAmount/25;
+        for(i = 0; i < arr.length / 25; i++) {
             barsArr[i].style.backgroundColor = "darkblue";
-            await sleep(0);
+            await sleep(time);
+            playSound(i);
             if (aboart){return arr;}
-            
         }
-        for(let i = 0; i < arr.length; i++) {
-            barsArr[i].style.backgroundColor = "green";
-            await sleep(0);
-            if (aboart){return arr;}    
+        for(j = 0; j < arr.length - i; j++) {
+            barsArr[j].style.backgroundColor = "green";
+            barsArr[j + i].style.backgroundColor = "blue";
+            playSound(j + i);
+            await sleep(time);
+            if (aboart){return arr;}
+        }
+        for(let k = j; k < arr.length; k++) {
+            barsArr[k].style.backgroundColor = "green";
+            await sleep(time);
+            if (aboart){return arr;}
         }
     }
 }
@@ -225,8 +234,8 @@ const checkArraySorted = (arr) => {
 async function playSound(i){
     let pitch = barsArr[i].style.height;
     pitch = parseInt(pitch.match(/\d+/)[0]) // get only numbers
-    loadSample("./src/sound/short-beep-sound-effect_vZ2ban22.mp3")
-  .then(sample => playSample(sample, (pitch / 2000) + 0.4)); // 2000 and 0.4 can be tuned for better sound
+    loadSample("./src/sound/pianoCut3.mp3")
+  .then(sample => playSample(sample, pitch * 0.003)); // 2000 and 0.4 can be tuned for better sound
 }
 
 
