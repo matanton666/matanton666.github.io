@@ -1,3 +1,75 @@
+
+.titleDiv {
+    position: relative;
+    scroll-snap-align: start;
+    margin-top: -50px auto;
+    background-color: teal;
+    background-size: 100% 100%;
+    padding-bottom: 8%;
+    border: 2px black
+}
+
+.title {
+    font-weight: bold;
+    font-size:70px;
+    font-family: 'Courier New', Courier, monospace;
+    color: orangered;
+    text-align: center;
+    padding-top: 3%
+}
+
+
+.subtitle {
+    color: rgb(11, 0, 128);
+    font-size:30px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding: 5%;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 4px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+  
+
+.move {
+    margin: 0;
+    position: absolute;
+    left: 38%;
+    
+    font-size:30px;
+    height: 50px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace; 
+    border-radius: 8px;
+    border: 4px solid white;
+    background-color: white;
+}
+
+.move:hover {
+    border: 4px solid black;
+}
+
+.move:hover > .arrow {
+    padding: 6px
+}
+
+
+
 .bars {
     margin: auto;
     width: 1000px;
@@ -41,7 +113,7 @@
 }
 .btnStart:active {
     background-color: rgb(6, 199, 6);
-    transform: translateY(2px);
+    transform: translateY(3px);
 }
 
 
@@ -62,7 +134,7 @@
 }
 .btnReset:active {
     background-color: rgb(254, 108, 50);
-    transform: translateY(2px);
+    transform: translateY(3px);
 }
 
 
@@ -87,24 +159,23 @@
 
 .done {
     position: absolute;
-    top: 35%;
     right: 50%;
-    font-size: 0px;
+    top: 30%;
     font-weight: bold !important;
     color:rgb(13, 233, 13);
-    opacity: 0.9;
+    opacity: 0.8;
     border-radius: 5px;
 }
 
 
 .algorithemError {
-    position: absolute;
-    right: 10px;
-    top: -10px;
+    float: right;
+    width: fit-content;
     color: rgb(211, 0, 0);
     border: solid black 2px;
-    font-weight: 900;
+    font-weight: bold;
     background-color: rgb(255, 255, 128);
+    margin-right: 10px;
 }
 
 
@@ -119,9 +190,35 @@
 }
 
 
+
+.moveInfo {
+    position: absolute;
+    bottom: 10%;
+    left: 1%;
+    font-size:20px;
+    height: 50px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace; 
+    border-radius: 8px;
+    border: 2px solid black;
+    background-color: white;
+}
+
+.moveInfo:hover {
+    border: solid 1px black;
+    transform: translateY(2px);
+    left: calc(1% + 1px);
+}
+
+.moveInfo:hover > .arrow {
+    padding: 6%;
+}
+
+
 .codeDiv {
     position: relative;
     float: left;
+    left: 3%;
     white-space: pre-wrap;
 }
 
@@ -129,7 +226,7 @@
 .descDiv {
     position:static;
     float: right;
-    padding-right: 10%;
+    padding-right: 7%;
     white-space: pre-wrap;
 }
 

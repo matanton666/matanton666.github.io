@@ -26,6 +26,7 @@ function setDescripton(algorithem) {
     const desc = document.getElementById("description");
     if (algorithem == "none"){
         // hide description and code and show site info 
+        document.getElementById("more info").style.visibility = "hidden";
         document.getElementById("codeDiv").style.visibility = "hidden";
         document.getElementById("descDiv").style.visibility = "hidden"; 
         document.getElementById("sortName").style.visibility = "hidden"; 
@@ -87,6 +88,7 @@ function setDescripton(algorithem) {
     code.innerHTML = obj.code;
     desc.innerHTML = obj.desc;
     console.log(obj);
+    document.getElementById("more info").style.visibility = "visible";
     document.getElementById("codeDiv").style.visibility = "visible";
     document.getElementById("descDiv").style.visibility = "visible"; 
     document.getElementById("sortName").style.visibility = "visible"; 
@@ -300,10 +302,7 @@ async function startBtn(){ // main function
     // here is what happens after the sort is finished
     drawBars(barArray);
     if (aboart){barArray = reset();}
-    console.log(barArray);
     document.getElementById("dencitySelect").disabled = false;// renable
     document.getElementById("scrambleType").disabled = false;
 }
-
-
 
