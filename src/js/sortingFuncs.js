@@ -682,26 +682,6 @@ async function countingSortByDigit(array, radix, exponent, minValue) {
 
 
 /*
-speed comparison of all:
-fastest to slowest:
-
-quick sort
-shell sort
-merge sort
-
-heap sort
-
-insertion sort
-
-selection sort 
-cocktail sort
-bubble sort
-
-
-
-
-
-
 async function beadSort(arr){
     let max = arr[0], len = arr.length;
     
