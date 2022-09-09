@@ -171,7 +171,8 @@ function colorAllBlack(arr) {
  * @param {string} color the wanted color
  */
 async function colorBar(index, color){
-    if (!mute){ playSound(index);}
+    try{if (!mute){ playSound(index - 1);}}
+    catch {if (!mute){ playSound(index);}}
     barsArr[index].style.backgroundColor = color;
 }
 
@@ -235,7 +236,7 @@ async function playSound(i){
     let pitch = barsArr[i].style.height;
     pitch = parseInt(pitch.match(/\d+/)[0]) // get only numbers
     loadSample("./src/sound/pianoCut3.mp3")
-  .then(sample => playSample(sample, pitch * 0.003)); // 2000 and 0.4 can be tuned for better sound
+  .then(sample => playSample(sample, (pitch) * 0.01 + 1)); // 2000 and 0.4 can be tuned for better sound
 }
 
 
