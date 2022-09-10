@@ -87,7 +87,8 @@ function setDescripton(algorithem) {
     name.innerHTML = obj.name;
     code.innerHTML = obj.code;
     desc.innerHTML = obj.desc;
-    console.log(obj);
+    hljs.highlightAll();
+    console.log(obj.code);
     document.getElementById("more info").style.visibility = "visible";
     document.getElementById("codeDiv").style.visibility = "visible";
     document.getElementById("descDiv").style.visibility = "visible"; 

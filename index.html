@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>sorting algorithem viewer</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./src\highlight/atom-one-dark.min.css">
 
     <style>
         html, body {
@@ -152,17 +153,16 @@
     <!--the description of the algorithem and its code-->
     <div class="info" id="info">
         <h1 id="sortName" class="sortName">name</h2>
-
         <div id="codeDiv" class="codeDiv">
-            <h3>JavaScript Code</h3>
-            <p id="code" class="code">
-                this is the code test<br>
-                new line test
-            </p>
+            <h3 style="text-align: center; font-size: 30px">JavaScript Code</h3>
+            <pre>
+                <code id="code" class="language-javascript">
+                </code>
+            </pre>
         </div>
 
         <div id="descDiv" class="descDiv">
-            <h3>Description</h3>
+            <h3 style="font-size: 30px">Description</h3>
             <p id="description" class="description">
                 description
             </p> 
@@ -175,5 +175,7 @@
     <script src="src/js/barFunctions.js"></script>
     <script src="src/js/sortingFuncs.js"></script>
     <script src="src/js/app.js"></script>
+    <script src="./src/highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
 </body>
 </html>

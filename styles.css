@@ -181,7 +181,7 @@
 
 .algorithemSelect {
     border: solid black;
-    background-color: rgba(30, 167, 252, 0.534);
+    background-color: rgba(25, 167, 255, 0.534);
     border-radius: 7px;
 }
 .algorithemSelect:hover {
@@ -218,22 +218,38 @@
 .codeDiv {
     position: relative;
     float: left;
-    left: 3%;
-    white-space: pre-wrap;
+    left: 2%;
+    border: 2px solid darkgray;
+    background-color: rgb(40,44,52);
+    padding: 1%;
+    border-radius: 20px;
+    color: rgb(171, 180, 189);
+    
 }
 
 
 .descDiv {
     position:static;
     float: right;
-    padding-right: 7%;
-    white-space: pre-wrap;
+    margin-right: 7%;
+    word-wrap: break-word;
+    width: 30%;
+    
+    border: 2px solid darkgray;
+    border-radius: 20px;
+    padding-left: 2%;
+    padding-right: 1%;
+    background-color: wheat;
+
+
 }
 
 .sortName {
     text-align: center;
+    font-size: 40px;
+    text-decoration: underline;
 }
 
 .description {
-    border-width: 30%;
+    font-size: larger;
 }

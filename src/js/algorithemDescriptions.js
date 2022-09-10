@@ -2,46 +2,49 @@
 
 const bubblesort = {
     name: "Bubble Sort",
-    desc:`Bubble sort is a sorting algorithm that sorts data in an array by looping through the array,
-and checking if the current item is greater than the next item.
-It will continue to loop through, swapping the items until they are sorted.
-If no swaps are made during a pass, then the data is sorted and we break the loop.`,
+    desc:`
+    Bubble sort is a sorting algorithm that sorts data in an array by looping through the array,
+    and checking if the current item is greater than the next item.
+    It will continue to loop through, swapping the items until they are sorted.
+    If no swaps are made during a pass, then the data is sorted and we break the loop.`,
 
-    code:`function bubbleSort(arr) {
-        // This variable is used to either continue or stop the loop
-        let continueSorting = true;
-      
-        // while continueSorting is true
-        while (continueSorting) {
-          // setting continueSorting false. below check to see if swap,
-          // if a swap,continue sorting. If no swaps, done sorting,
-          // and stop our while loop.
-          continueSorting = false;
-      
-          // loop through the arr from 0 to next to last
-          for (let i = 0; i < arr.length - 1; i++) {
-            // check if we need to swap
-            if (arr[i] > arr[i + 1]) {
-              // swap
-              let temp = arr[i];
-              arr[i] = arr[i + 1];
-              arr[i + 1] = temp;
-      
-              // since a swap was made, we want to continue sorting
-              continueSorting = true;
-            }
-          }
-        }
-      
-        // After all swaps have been made, then we return our sorted array
-        return arr;`
+    code:`
+function bubbleSort(arr) {
+// This variable is used to either continue or stop the loop
+let continueSorting = true;
+
+// while continueSorting is true
+while (continueSorting) {
+  // setting continueSorting false. below check to see if swap,
+  // if a swap,continue sorting. If no swaps, done sorting,
+  // and stop our while loop.
+  continueSorting = false;
+
+  // loop through the arr from 0 to next to last
+  for (let i = 0; i < arr.length - 1; i++) {
+    // check if we need to swap
+    if (arr[i] > arr[i + 1]) {
+      // swap
+      let temp = arr[i];
+      arr[i] = arr[i + 1];
+      arr[i + 1] = temp;
+
+      // since a swap was made, we want to continue sorting
+      continueSorting = true;
+    }
+  }
+}
+
+// After all swaps have been made, then we return our sorted array
+return arr;`
 }
 
 
 
 const selection = {
     name: "Selection Sort",
-    code:`function swap(arr, i, j) {
+    code:`
+function swap(arr, i, j) {
   const temp = arr[i];
   arr[i] = arr[j];
   arr[j] = temp;
@@ -62,11 +65,12 @@ function selectionSort(arr) {
   }
   return arr;
 }`,
-    desc: `selection sort is an in-place comparison sorting algorithm.
-It has an O(n2) time complexity, which makes it inefficient on large lists.
-The algorithm divides the input list into two parts: a sorted sublist of items
-which is built up from left to right at the front (left) of the list,
-and a sublist of the remaining unsorted items that occupy the rest of the list.`
+    desc: `
+    selection sort is an in-place comparison sorting algorithm.
+    It has an O(n2) time complexity, which makes it inefficient on large lists.
+    The algorithm divides the input list into two parts: a sorted sublist of items
+    which is built up from left to right at the front (left) of the list,
+    and a sublist of the remaining unsorted items that occupy the rest of the list.`
 }
 
 
@@ -74,14 +78,15 @@ and a sublist of the remaining unsorted items that occupy the rest of the list.`
 
 const cocktail = {
     name: "Cocktail Sort",
-    code:`function cocktailSort(arr) {
+    code:`
+function cocktailSort(arr) {
 	//Swapped is to check if everything is sorted
 	let start = 0, end = arr.length, swapped = true;
 
 	while (swapped) {
 		swapped = false;
 
-		//Bubble sort from the left to the right, moving the largest.
+		//Bubble sort move largest to the end
 		for (let i = start; i < end - 1; i++)
 		{
 			if (arr[i] > arr[i+1]) {
@@ -104,7 +109,7 @@ const cocktail = {
 		//Set to false, so it can be used for the next phase
 		swapped = false;
 
-		//Reverse Bubble sort, moving the smallest to the front.
+		//Reverse Bubble sort, move smallest to the front.
 		for (let i = end - 1; i > start; i--)
 		{
 			if (arr[i - 1] > arr[i])
@@ -281,8 +286,8 @@ function quickSort(arr, left, right) {
 const heap = {
     name: "Heap Sort",
     code:`
-/* to create MAX  array */  
 function heap_root(input, i) {
+  /* to create MAX  array */  
     var left = 2 * i + 1;
     var right = 2 * i + 2;
     var max = i;
@@ -564,8 +569,7 @@ function flashSort (arr) {
     arr[i + 1] = hold
   }
   return arr
-}
- `,
+}`,
     desc: `
     The algorithem assigns each of the n input elements to one of m buckets,
     efficiently rearranges the input to place the buckets in the correct order, 
