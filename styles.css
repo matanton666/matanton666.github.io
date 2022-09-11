@@ -3,7 +3,7 @@
     position: relative;
     scroll-snap-align: start;
     margin-top: -50px auto;
-    background-color: teal;
+    background-color: rgb(2, 184, 184);
     background-size: 100% 100%;
     padding-bottom: 8%;
     border: 2px black
@@ -62,9 +62,34 @@
 
 .move:hover {
     border: 4px solid black;
+    transform: translateY(2px);
 }
 
 .move:hover > .arrow {
+    padding: 6px
+}
+
+
+.about {
+    margin: 0;
+    position: absolute;
+    left: 2%;
+    
+    font-size:30px;
+    height: 50px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace; 
+    border-radius: 8px;
+    border: 4px solid white;
+    background-color: white;
+}
+
+.about:hover {
+    border: 4px solid black;
+    transform: translateY(2px);
+}
+
+.about:hover > .arrow {
     padding: 6px
 }
 
