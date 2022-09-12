@@ -119,6 +119,7 @@ function selectScrambleType(){
  function getBarNum(){
     let slider = document.getElementById("slider");
     let txt = document.getElementById("speedTxt");
+    slider.max = mute ? 100:90;
     sortSpeed = 300 - (slider.value * 3);
     txt.innerHTML = "sorting speed: " + slider.value;
 }
@@ -128,6 +129,8 @@ function selectScrambleType(){
 function toggleMute(){
     document.getElementById("mute").style.backgroundImage = (mute) ? "url(./src/pictures/speaker.png)" : "url(./src/pictures/volume-mute.png)";
     mute = !mute;
+    getBarNum();
+    showSnackbar();
 }
 
 // make text bigger untill it gets to the max size
@@ -158,6 +161,17 @@ function playSample(sample, rate) {
     source.start(0);
 }
 
+
+function showSnackbar(){
+    clearTimeout(timeout);
+    // Get the snackbar DIV
+  var x = document.getElementById("snackbar");
+  // Add the "show" class to DIV
+  x.className = "show";
+  x.innerHTML = mute ? "max speed: 100" : "max speed: 90,    so sound wont flicker";
+  // After 3 seconds, remove the show class from DIV
+  timeout = setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
 
 
 

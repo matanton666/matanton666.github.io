@@ -71,6 +71,7 @@ let aboart = false;
 let barAmount = 100, pxDencity = "9px", barWidth = "solid white 1px";
 let scrambleType = "random";
 var mute = true;
+let timeout;
 const context = new AudioContext();
 
 
