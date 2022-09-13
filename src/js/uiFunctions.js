@@ -82,6 +82,10 @@ function setDescripton(algorithem) {
         case "radix":
             obj = radix;
             break;
+            
+        case "tim":
+            obj = tim;
+            break;
     }
             
     name.innerHTML = obj.name;
@@ -305,7 +309,14 @@ async function startBtn(){ // main function
             barArray = await radixSort(barArray);
             afterSort(barArray);
             popupText(document.getElementById("done"), 60);
+            break;        
+
+        case "tim":
+            barArray = await timSort(barArray, barArray.length);
+            afterSort(barArray);
+            popupText(document.getElementById("done"), 60);
             break;
+        
             
         default:
             document.getElementById("algorithemError").style.visibility = "visible";
