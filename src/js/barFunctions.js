@@ -48,13 +48,13 @@ async function afterSort(arr){
         for(i = 0; i < arr.length / 25; i++) {
             barsArr[i].style.backgroundColor = "darkblue";
             await sleep(time);
-            playSound(i);
+            mute ? "":playSound(i);
             if (aboart){return arr;}
         }
         for(j = 0; j < arr.length - i; j++) {
             barsArr[j].style.backgroundColor = "green";
             barsArr[j + i].style.backgroundColor = "blue";
-            playSound(j + i);
+            mute ? "":playSound(j + i);
             await sleep(time);
             if (aboart){return arr;}
         }
