@@ -3,4 +3,4 @@
 	the website showcases how multiple sorting algorithms work and a neat way to visualize them.
 	
 	to see the website, visit:
-[www.sorting-algorithms.me](https://sorting-algorithms.me/index.html)
+[svisuals.tech](https://www.svisuals.tech/)
